@@ -9,6 +9,7 @@ import {
   Testimonial,
   BlogPost
 } from '../types';
+import headshotImage from '../assets/images/user_headshot.jpg';
 
 export const personalDetails = {
   name: 'Pratik Deshmukh',
@@ -25,7 +26,7 @@ export const personalDetails = {
   projectsDelivered: 10,
   clientsServed: 8,
   industries: ['Life Insurance', 'P&C Insurance', 'Oil & Gas', 'e-Governance'],
-  headshotUrl: '/src/assets/images/user_headshot.png',
+  headshotUrl: 'https://lh3.googleusercontent.com/d/1zIbegeY6skdwssAcIqTvDM0XToY9XRUk',
   heroTagline: 'Architecting zero-defect enterprise data migrations and engineering next-generation agentic AI workflows for global financial, insurance, and energy leaders.',
   aboutStory: {
     whoIAm: "I am a Senior Technical Lead and Data Migration Architect with over 14 years of hands-on expertise orchestrating high-stakes, multi-terabyte enterprise data transformations. My career is defined by taking mission-critical legacy policy administration systems—specifically legacy Insurance Domain platforms—and engineering pristine, high-availability cutovers into modern cloud and enterprise targets.",

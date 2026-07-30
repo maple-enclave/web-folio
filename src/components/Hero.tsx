@@ -280,8 +280,14 @@ export const Hero: React.FC<HeroProps> = ({
                     alt="Pratik Deshmukh - Senior Technical Lead"
                     referrerPolicy="no-referrer"
                     onError={(e) => {
-                      // Fallback to direct Google Drive image stream link if local static file load fails
-                      (e.target as HTMLImageElement).src = "https://lh3.googleusercontent.com/d/1ajukw1QdLSPE3l-87-vm5LQaExoea5p_";
+                      const target = e.currentTarget;
+                      if (!target.dataset.fallback) {
+                        target.dataset.fallback = '1';
+                        target.src = 'https://drive.google.com/uc?export=view&id=1zIbegeY6skdwssAcIqTvDM0XToY9XRUk';
+                      } else if (target.dataset.fallback === '1') {
+                        target.dataset.fallback = '2';
+                        target.src = '/headshot.jpg';
+                      }
                     }}
                     className="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105"
                   />

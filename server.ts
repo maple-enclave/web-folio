@@ -103,6 +103,8 @@ app.post('/api/contact', (req, res) => {
 });
 
 async function startServer() {
+  app.use(express.static(path.join(process.cwd(), 'public')));
+
   if (process.env.NODE_ENV !== 'production') {
     const vite = await createViteServer({
       server: { middlewareMode: true },
